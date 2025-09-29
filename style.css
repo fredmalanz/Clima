@@ -1,0 +1,111 @@
+* { /* * { ... } define un selector universal, lo que significa que los estilos especificados dentro de las llaves*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+body {
+    background-color:rgb(49, 44, 53);
+    background-image: url(https://images8.alphacoders.com/736/thumb-1920-736059.png);
+}
+.card { /*seleccionamos la calse card del html*/
+    width: 90%; /*ancho al contenedor principal*/
+    max-width: 470px; /*ancho maximo de 470*/
+    background: transparent;
+    backdrop-filter: blur(10px);
+    /*background-color: rgb(86, 63, 108); color de fondo*/
+    color: white; /*color de letra*/
+    margin: 200px auto 0; /*margen de 50 pixeles arriba, centrado, y cero pixeles abajo*/
+    border: 20px; /*borde de 20 pixeles*/
+    padding: 40px 35px; /*40 pixeles arriba y 35 abajo*/
+    text-align: center; /*alineamos el texto al centro*/
+    box-shadow: 0px 0px 20px rgb(3, 58, 93);/*Sombra para el contenedor*/
+}
+
+.search-bar{ /*seleccionamos la clase search-bar del html, ajustamos el diseño de la barra de busqueda barra de busqueda*/
+    width: 100%; /*ancho del 100%*/
+    display: flex; /*establecemos el contenedor del input como flexible*/
+    align-items: center; /*alineamos al centro*/
+    justify-content: center;
+}
+.search-bar input{ /*seleccionamos la clase search-bar del html, ajustamos las propiedades del input en el interior de la barra de busqueda recordamos que dentro existe un input,button e img*/
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    color: #555;
+    padding: 10px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+.search-bar button{ /*seleccionamos la clase search-bar del html, en este caso realizamos las propiedades del boton, recordamos que dentro existe un input,button e img*/
+    border: 0;
+    outline: 0;
+    background-color: #ebfffc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.search-bar button img{ /*seleccionamos la clase search-bar del html recordamos que dentro existe un input,button e img*/
+    width: 22px; /*ancho de la imagen*/
+}
+
+.weather-icon{ /*Ajustaremos el icono del clima, la clase weather-icon del html*/
+    width: 170px;
+    margin-top: 30px;
+}
+
+.weather h1{ /*Seleccionamos la clase clima y el titulo h1 del html, es la que dice 23'C y ponemos sus ajustes, recuerda que tenemos dos titulos h1 y h2*/
+   font-size: 80px; /*Tamaño de fuente*/
+   font-weight: 500; /*ajustamos el grosor de la fuente*/
+}
+
+.weather h2{ /*Seleccionamos la clase clima y el titulo h2 del html, es la que dice Lima y ponemos sus ajustes, recuerda que tenemos 
+               dos titulos h1 y h2*/
+   font-size: 45px; /*Tamaño de fuente*/
+   font-weight: 500; /*ajustamos el grosor de la fuente*/
+   margin-top: 10px;
+}
+.details{ /*Seleccionamos la clase detalles del html*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*alineamos los elementos en el eje central dentro del eje principal, se colocan en los bordes opuestos
+                                      del contenedor de forma regular*/
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.col,
+.coli{ /*Seleccionamos la clase col que estan en nuestro html, son dos iguales, una para el viento y otra de la humedad en las imagenes que estan 
+      en details*/
+   display: flex;
+   align-items: center;
+   text-align: left;
+}
+.col img{
+    width: 70px; /*ajustamos el tamaño de la imagene de viento dentro del contenedor coli img*/
+    margin-right: 10px;/*Ajustamos el margen a la derecha con EL TEXTO DE 50% Velocidad de viento*/
+}
+.coli img{
+    width: 50px; /*ajustamos el tamaño de la imagen de Humedad dentro del contenedor col img*/
+    margin-right: 10px; /*Ajustamos el margen a la derecha con EL TEXTO DE 50% Humedad*/
+}
+.humidity,
+.wind{ /*Seleccionamos las clases humidity y wind de nuestro html, son las que nos diran la humnedad y el viento, estan dentro de las <p> 
+       dicen 50% humedad y 120Km/h velocidad de viento*/
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather{
+    display: none; /*ocultamos todo lo que esta en la clase weather, solo queda visible la clase search-bar, recuerda el contenedor de todo es la clase card*/
+}
+.error{ /*seleccionamos la clase error del html que esta arriba de la clase weather por eso no desaparece junto con esta*/
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
