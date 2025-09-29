@@ -109,3 +109,75 @@ body {
     margin-top: 10px;
     display: none;
 }
+@media (max-width: 480px) {
+    .card {
+        margin: 50px auto 0; /* menos margen arriba */
+        padding: 20px 15px;  /* menos relleno */
+    }
+
+    .search-bar input {
+        height: 45px;
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .search-bar button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .weather-icon {
+        width: 120px;
+        margin-top: 20px;
+    }
+
+    .weather h1 {
+        font-size: 50px;
+    }
+
+    .weather h2 {
+        font-size: 28px;
+    }
+
+    .humidity,
+    .wind {
+        font-size: 20px;
+    }
+
+    .col img {
+        width: 50px;
+    }
+
+    .coli img {
+        width: 40px;
+    }
+}
+
+/* 🔹 Para tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+    .card {
+        margin: 100px auto 0;
+        padding: 30px 25px;
+    }
+
+    .weather h1 {
+        font-size: 65px;
+    }
+
+    .weather h2 {
+        font-size: 36px;
+    }
+
+    .humidity,
+    .wind {
+        font-size: 24px;
+    }
+}
+
+/* 🔹 Para pantallas grandes */
+@media (min-width: 1025px) {
+    .card {
+        margin: 150px auto 0;
+        padding: 40px 35px;
+    }
+}
