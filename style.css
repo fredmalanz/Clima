@@ -6,7 +6,7 @@
 }
 body {
     background-color:rgb(49, 44, 53);
-    background-image: url(https://images8.alphacoders.com/736/thumb-1920-736059.png);
+   /* background-image: url(https://images8.alphacoders.com/736/thumb-1920-736059.png); */
 }
 .card { /*seleccionamos la calse card del html*/
     width: 90%; /*ancho al contenedor principal*/
@@ -111,7 +111,7 @@ body {
 }
 @media (max-width: 480px) {
     .card {
-        margin: 120px auto 0; /* menos margen arriba */
+        margin: 120px auto 0; /* margen arriba */
         padding: 20px 15px;  /* menos relleno */
     }
 

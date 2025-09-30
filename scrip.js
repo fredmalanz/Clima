@@ -4,6 +4,11 @@ const weatherIcon = document.querySelector('.weather-icon'); /*Selecciona el ele
 const weather = document.querySelector('.weather'); /*Selecciona el contenedor de información del clima (.weather) y lo guarda en weather.*/
 const erromsg = document.querySelector('.error'); /*Selecciona el elemento que muestra mensajes de error (.error) y lo guarda en erromsg*/
 const enter = document.querySelector('.busqueda');
+const bodycont = document.querySelector("body");
+const weatherh1 = document.querySelector('.weather h1');
+const weatherh2 = document.querySelector('.weather h2');
+const col1 = document.querySelector('.col');
+const coli1 = document.querySelector('.coli');
 
 async function checkWeather(city) { /*Define una función asíncrona llamada checkWeather que recibe el nombre de una ciudad (city).*/
     const apiKey = '1c9675ac342ffce10a05693880539499'; /*Guarda la clave de API de OpenWeatherMap (una especie de contraseña que te permite hacer consultas).*/
@@ -35,12 +40,39 @@ function updateWeatherUI(data) { /*esta función recibe los datos del clima y lo
     weather.style.display = 'block'; /*Muestra en pantalla la sección .weather (por si estaba oculta).*/
 }
 
+function cambiarFondoPorHora() { /*Esta es una funcion que cambia el fondo de dependiendo de la hora ya sea dia, tarde o noche*/
+    const hora = new Date().getHours();
+    document.body.style.backgroundSize = "cover"
+    
+    if (hora >= 6 && hora < 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 12. pondra la imagen del dia*/
+        bodycont.style.backgroundImage = "url('https://www.hdwallpapers.in/download/steven_universe_landscape_with_wooden_barricade_on_sides_and_clothes_drying_on_rope_near_a_tree_with_background_of_blue_sky_and_mountain_during_day_time_hd_movies-HD.jpg')";
+        weatherh1.style.color = "rgba(101, 106, 109, 1)"
+        weatherh2.style.color = "rgba(101, 106, 109, 1)"
+        col1.style.color = "rgba(101, 106, 109, 1)"
+        coli1.style.color = "rgba(101, 106, 109, 1)"
+    } else if (hora >= 16 && hora < 19) {
+        bodycont.style.backgroundImage = "url('https://i.ytimg.com/vi/OrHhYfDYtOo/maxresdefault.jpg')";
+        weatherh1.style.color = "rgba(0, 0, 0, 1)"
+        weatherh2.style.color = "rgba(0, 0, 0, 1)"
+        col1.style.color = "rgba(0, 0, 0, 1)"
+        coli1.style.color = "rgba(0, 0, 0, 1)"
+    } else {
+        bodycont.style.backgroundImage = "url('https://images8.alphacoders.com/736/thumb-1920-736059.png')";
+    }
+}
+
 searchBtn.addEventListener('click',() => { /*Cuando el usuario hace clic en el botón de búsqueda, toma el valor del <input> y llama a la función checkWeather() con ese valor (la ciudad).*/
     checkWeather(inputBox.value); 
 })
 
-
+inputBox.addEventListener("keypress", (e) =>{ /*Creamos la funcion de Enter para buscar*/
+    if(e.key === "Enter"){
+        checkWeather(inputBox.value);
+    }
+})
 
 window.onload = () => { /*Esta funcion se ejecuta cuando la pagina ya cargo, lo que permite que pasar a la siguiente parte del codigo. debem ir juntas*/
     checkWeather('xalapa') /*esta parte del codigo hace que cuando la pagina cargue, automaticamente ejecute la funcion checkWeather para consultar el clima de xalapa*/
+    cambiarFondoPorHora();
 }
+
