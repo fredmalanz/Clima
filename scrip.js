@@ -9,6 +9,7 @@ const weatherh1 = document.querySelector('.weather h1');
 const weatherh2 = document.querySelector('.weather h2');
 const col1 = document.querySelector('.col');
 const coli1 = document.querySelector('.coli');
+const selectaut = document.querySelector('.autocomplete-suggestion');
 
 async function checkWeather(city) { /*Define una función asíncrona llamada checkWeather que recibe el nombre de una ciudad (city).*/
     const apiKey = '1c9675ac342ffce10a05693880539499'; /*Guarda la clave de API de OpenWeatherMap (una especie de contraseña que te permite hacer consultas).*/
@@ -45,13 +46,13 @@ function cambiarFondoPorHora() { /*Esta es una funcion que cambia el fondo de de
     document.body.style.backgroundSize = "cover"
     
     
-    if (hora >= 6 && hora < 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 12. pondra la imagen del dia*/
+    if (hora >= 6 && hora < 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 16. pondra la imagen del dia*/
         bodycont.style.backgroundImage = "url('https://www.hdwallpapers.in/download/steven_universe_landscape_with_wooden_barricade_on_sides_and_clothes_drying_on_rope_near_a_tree_with_background_of_blue_sky_and_mountain_during_day_time_hd_movies-HD.jpg')";
         weatherh1.style.color = "rgba(101, 106, 109, 1)"
         weatherh2.style.color = "rgba(101, 106, 109, 1)"
         col1.style.color = "rgba(101, 106, 109, 1)"
         coli1.style.color = "rgba(101, 106, 109, 1)"
-    } else if (hora >= 16 && hora < 19) {git 
+    } else if (hora >= 17 && hora < 19) {
         bodycont.style.backgroundImage = "url('https://images8.alphacoders.com/736/thumb-1920-736059.png')";
         weatherh1.style.color = "rgba(0, 0, 0, 1)"
         weatherh2.style.color = "rgba(0, 0, 0, 1)"
@@ -62,11 +63,11 @@ function cambiarFondoPorHora() { /*Esta es una funcion que cambia el fondo de de
     }
 }
 
-searchBtn.addEventListener('click',() => { /*Cuando el usuario hace clic en el botón de búsqueda, toma el valor del <input> y llama a la función checkWeather() con ese valor (la ciudad).*/
+searchBtn.addEventListener('click', () => { /*Cuando el usuario hace clic en el botón de búsqueda, toma el valor del <input> y llama a la función checkWeather() con ese valor (la ciudad).*/
     checkWeather(inputBox.value); 
 })
 
-inputBox.addEventListener("keypress", (e) =>{ /*Creamos la funcion de Enter para buscar*/
+inputBox.addEventListener("keypress", (e) => { /*Creamos la funcion de Enter para buscar*/
     if(e.key === "Enter"){
         checkWeather(inputBox.value);
     }
