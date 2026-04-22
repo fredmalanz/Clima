@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App de Clima</title>
+    <title>App de Clima Busqueda</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.11/jquery.autocomplete.min.js"></script>
 </head>
+
 <body class="body">
     <div class="card">
         <div class="search-bar">
-            <input type="text" id="busqueda" placeholder="Ingrese una ciudad" spellcheck="false">
-            <button><img src="https://static.vecteezy.com/system/resources/thumbnails/013/760/688/small/search-icon-in-dark-colors-magnifying-glass-signs-for-web-or-mobile-interface-png.png" alt=""></button>
+            <div class="locationiq-autocomplete-control locationiq-bounds locationiq-control locationiq-autocomplete-expanded"
+                id="search-box-area"></div>
+            <input type="text" id="busqueda" placeholder="Ingrese una ciudad" spellcheck="false"
+                autocomplete="country-name">
+            <button><img
+                    src="https://static.vecteezy.com/system/resources/thumbnails/013/760/688/small/search-icon-in-dark-colors-magnifying-glass-signs-for-web-or-mobile-interface-png.png"
+                    alt=""></button>
         </div>
         <div class="error">
             <p>Nombre de la ciudad invalido</p>
@@ -38,6 +48,9 @@
             </div>
         </div>
     </div>
+    <script src="sugerencias.js"></script>
     <script src="scrip.js"></script>
+
 </body>
+
 </html>

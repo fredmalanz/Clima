@@ -44,14 +44,15 @@ function cambiarFondoPorHora() { /*Esta es una funcion que cambia el fondo de de
     const hora = new Date().getHours();
     document.body.style.backgroundSize = "cover"
     
+    
     if (hora >= 6 && hora < 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 12. pondra la imagen del dia*/
         bodycont.style.backgroundImage = "url('https://www.hdwallpapers.in/download/steven_universe_landscape_with_wooden_barricade_on_sides_and_clothes_drying_on_rope_near_a_tree_with_background_of_blue_sky_and_mountain_during_day_time_hd_movies-HD.jpg')";
         weatherh1.style.color = "rgba(101, 106, 109, 1)"
         weatherh2.style.color = "rgba(101, 106, 109, 1)"
         col1.style.color = "rgba(101, 106, 109, 1)"
         coli1.style.color = "rgba(101, 106, 109, 1)"
-    } else if (hora >= 16 && hora < 19) {
-        bodycont.style.backgroundImage = "url('https://i.ytimg.com/vi/OrHhYfDYtOo/maxresdefault.jpg')";
+    } else if (hora >= 16 && hora < 19) {git 
+        bodycont.style.backgroundImage = "url('https://images8.alphacoders.com/736/thumb-1920-736059.png')";
         weatherh1.style.color = "rgba(0, 0, 0, 1)"
         weatherh2.style.color = "rgba(0, 0, 0, 1)"
         col1.style.color = "rgba(0, 0, 0, 1)"
