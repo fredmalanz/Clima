@@ -45,9 +45,8 @@ function updateWeatherUI(data) { /*esta función recibe los datos del clima y lo
 
 function cambiarFondoPorHora() { /*Esta es una funcion que cambia el fondo de dependiendo de la hora ya sea dia, tarde o noche*/
     const hora = new Date().getHours();
-    document.body.style.backgroundSize = "cover"
-    
-    
+    document.body.style.backgroundSize = "absolute"
+        
     if (hora >= 6 && hora <= 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 16. pondra la imagen del dia*/
         bodycont.style.backgroundImage = "url('https://images.alphacoders.com/736/thumb-1920-736053.png')";
         weatherh1.style.color = "rgba(101, 106, 109, 1)"

@@ -204,6 +204,12 @@ body {
 
 /* 🔹 Para tablets */
 @media (min-width: 481px) and (max-width: 768px) {
+
+    .body{
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
     .card {
         margin: 100px auto 0;
         padding: 30px 25px;
@@ -225,6 +231,7 @@ body {
 
 /* 🔹 Para pantallas grandes */
 @media (min-width: 1025px) {
+    
     .card {
         margin: 150px auto 0;
         padding: 40px 35px;
