@@ -9,7 +9,7 @@ const weatherh1 = document.querySelector('.weather h1');
 const weatherh2 = document.querySelector('.weather h2');
 const col1 = document.querySelector('.col');
 const coli1 = document.querySelector('.coli');
-const selectaut = document.querySelector('.autocomplete-suggestion');
+const selectaut = document.querySelector('.displayLatLon');
 
 async function checkWeather(city) { /*Define una función asíncrona llamada checkWeather que recibe el nombre de una ciudad (city).*/
     const apiKey = '1c9675ac342ffce10a05693880539499'; /*Guarda la clave de API de OpenWeatherMap (una especie de contraseña que te permite hacer consultas).*/
@@ -29,14 +29,16 @@ function updateWeatherUI(data) { /*esta función recibe los datos del clima y lo
     document.querySelector('.humidity').innerHTML = `${data.main.humidity}%`; /*Muestra el porcentaje de humedad*/
     document.querySelector('.wind').innerHTML = `${data.wind.speed}km/h`; /*Muestra la velocidad del viento en km/h.*/
 
-    const weatherIcons = { /*Define un objeto con diferentes tipos de clima y su respectivo ícono (una imagen en URL).*/
+    const weatherIcons = { /*Define un objeto con diferentes tipos de clima y su respectivo ícono (una imagen en URL). esto solo define que tipo de clima pondra una imagen*/
         Clear: 'https://cdn-icons-png.flaticon.com/512/1838/1838873.png',
         Clouds: 'https://cdn-icons-png.flaticon.com/512/11166/11166805.png',
         Snow: 'https://cdn-icons-png.flaticon.com/512/3104/3104595.png',
         Rain: 'https://cdn-icons-png.flaticon.com/512/460/460268.png'
     }
 
-    weatherIcon.src = weatherIcons[data.weather[0].main] || 'https://cdn-icons-png.flaticon.com/512/4514/4514767.png'; /*Cambia la imagen del ícono del clima según el tipo de clima que devuelve la API. Si no se encuentra el tipo, se muestra una imagen genérica.*/
+    weatherIcon.src = weatherIcons[data.weather[0].main] || 'https://cdn-icons-png.flaticon.com/512/4514/4514767.png'; /*Cambia la imagen del ícono del clima según el tipo de clima que devuelve la API. }
+    compara que la clase weather-icon del html, al obtener el dato main de weather 0: (se ve desde consola) tenga alguno de los climas que estan en const weatherIcons = { 
+    tal cual estan escritos en el main. Y si no se encuentra el nombre de clima o es diferente a como dice const weatherIcons = { muestra una imagen genérica.*/
 
     weather.style.display = 'block'; /*Muestra en pantalla la sección .weather (por si estaba oculta).*/
 }
@@ -46,18 +48,18 @@ function cambiarFondoPorHora() { /*Esta es una funcion que cambia el fondo de de
     document.body.style.backgroundSize = "cover"
     
     
-    if (hora >= 6 && hora < 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 16. pondra la imagen del dia*/
-        bodycont.style.backgroundImage = "url('https://www.hdwallpapers.in/download/steven_universe_landscape_with_wooden_barricade_on_sides_and_clothes_drying_on_rope_near_a_tree_with_background_of_blue_sky_and_mountain_during_day_time_hd_movies-HD.jpg')";
+    if (hora >= 6 && hora <= 16) { /*declaramos que si la variable hora es mayor o igual que 6 y menor que 16. pondra la imagen del dia*/
+        bodycont.style.backgroundImage = "url('https://images.alphacoders.com/736/thumb-1920-736053.png')";
         weatherh1.style.color = "rgba(101, 106, 109, 1)"
         weatherh2.style.color = "rgba(101, 106, 109, 1)"
         col1.style.color = "rgba(101, 106, 109, 1)"
         coli1.style.color = "rgba(101, 106, 109, 1)"
-    } else if (hora >= 17 && hora < 19) {
+    } else if (hora >= 17 && hora < 19) { 
         bodycont.style.backgroundImage = "url('https://images8.alphacoders.com/736/thumb-1920-736059.png')";
-        weatherh1.style.color = "rgba(0, 0, 0, 1)"
-        weatherh2.style.color = "rgba(0, 0, 0, 1)"
-        col1.style.color = "rgba(0, 0, 0, 1)"
-        coli1.style.color = "rgba(0, 0, 0, 1)"
+        weatherh1.style.color = "rgb(255, 255, 255)"
+        weatherh2.style.color = "rgb(255, 255, 255)"
+        col1.style.color = "rgb(255, 255, 255)"
+        coli1.style.color = "rgb(255, 255, 255)"
     } else {
         bodycont.style.backgroundImage = "url('https://images8.alphacoders.com/736/thumb-1920-736059.png')";
     }
