@@ -157,6 +157,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .body{
+        background-repeat: no-repeat;
+        background-position: center;
+        
+    }
+    
     .card {
         margin: 120px auto 0;
         /* margen arriba */
@@ -203,11 +209,12 @@ body {
 }
 
 /* 🔹 Para tablets */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) and (max-width: 767px) {
 
     .body{
         background-repeat: no-repeat;
         background-position: center;
+        
     }
 
     .card {
@@ -230,7 +237,13 @@ body {
 }
 
 /* 🔹 Para pantallas grandes */
-@media (min-width: 1025px) {
+@media (min-width: 768px) {
+
+    .body{
+        background-repeat: no-repeat;
+        background-position: absolute;
+        
+    }
     
     .card {
         margin: 150px auto 0;
