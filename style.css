@@ -6,8 +6,105 @@
     font-family: sans-serif
 }
 
+ul {
+    background-color: rgba(0, 0, 0, 0.6);  
+    margin-top: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;    
+}
+
+a {
+    background-color: rgba(0, 0, 0, 0.1);
+    text-decoration: none; 
+    border-bottom: 2px solid rgba(231, 231, 231, 0.1);  
+}
+
+b {
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.translate {
+    display: flex;
+    justify-content: end;
+    width: 95%;
+    margin: auto;
+}
+
+.idioma {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+
+}
+
+/*Lista de idiomas*/
+
+.idiomas {
+    position: absolute;
+    top: 38px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.idiomas li{
+    width: 100%;
+}
+
+.idiomas li a {
+    display: flex;
+    padding-right: 3px;
+    padding-top: 6px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    font-size: 25px;
+    color:white;
+}
+
+.idiomas li a:hover {
+    background-color: rgb(33, 43, 71);
+}
+
+.idiomas li img {
+    border-radius: 50%;
+}
+
+/*toogle*/
+
+.toggle {
+    visibility: visible;
+}
+
+/* Main */
+
+.info {
+    width: 50%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 body {
-    background-color: rgb(49, 44, 53);
+    
     /* background-image: url(https://images8.alphacoders.com/736/thumb-1920-736059.png); */
 }
 
@@ -72,14 +169,16 @@ body {
 
 .search-bar button img {
     /*seleccionamos la clase search-bar del html recordamos que dentro existe un input,button e img*/
-    width: 22px;
+    width: 50%;
+    height: 50%;
     /*ancho de la imagen*/
 }
 
 .weather-icon {
     /*Ajustaremos el icono del clima, la clase weather-icon del html*/
-    width: 170px;
-    margin-top: 30px;
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
 }
 
 .weather h1 {
@@ -97,7 +196,7 @@ body {
     /*Tamaño de fuente*/
     font-weight: 500;
     /*ajustamos el grosor de la fuente*/
-    margin-top: 10px;
+    margin-top: 1px;
 }
 
 .details {
@@ -121,14 +220,16 @@ body {
 }
 
 .col img {
-    width: 70px;
-    /*ajustamos el tamaño de la imagene de viento dentro del contenedor coli img*/
+    width: 50px;
+    height: 50px;
+    /*ajustamos el tamaño de la imagen de viento dentro del contenedor coli img*/
     margin-right: 10px;
-    /*Ajustamos el margen a la derecha con EL TEXTO DE 50% Velocidad de viento*/
+    /*Ajustamos el margen a la derecha con EL TEXTO DE 50% humedad*/
 }
 
 .coli img {
-    width: 50px;
+    width: 45px;
+    height: 45px;
     /*ajustamos el tamaño de la imagen de Humedad dentro del contenedor col img*/
     margin-right: 10px;
     /*Ajustamos el margen a la derecha con EL TEXTO DE 50% Humedad*/
@@ -261,7 +362,7 @@ body {
     display: block;
 }
 
-.autocomplete-suggestion:hover{
+.autocomplete-suggestion:hover {
     background-color: rgba(143, 240, 243, 0.87);
     cursor: pointer;
 }
