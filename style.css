@@ -7,20 +7,40 @@
 }
 
 ul {
-    background-color: rgba(0, 0, 0, 0.6);  
-    margin-top: 42px;
-    padding-left: 20px;
-    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.6);    
+    margin-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
     list-style: none;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;    
+    border-bottom-right-radius: 15px;   
+    width: 200px; 
+    height: 280px;
+}
+
+.btn-rotar {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+      
+    transition: transform 0.2s ease;
+
+    display: inline-block;
+}
+
+.girado {
+    transform: rotate(-90deg);
+}
+
+.aparece {
+
+    --clip: inset(0 0 0 0);
 }
 
 a {
-    background-color: rgba(0, 0, 0, 0.1);
     text-decoration: none; 
-    border-bottom: 2px solid rgba(231, 231, 231, 0.1);  
+    border-bottom: 2px solid rgba(231, 231, 231, 0.1); 
 }
 
 b {
@@ -50,8 +70,7 @@ img {
     display: flex;
     align-items: center;
     gap: 5px;
-    position: absolute;
-
+    position: absolute; 
 }
 
 /*Lista de idiomas*/
@@ -62,11 +81,12 @@ img {
     display: flex;
     flex-direction: column;
     visibility: hidden;
+    
+
+    clip-path: var(--clip, inset(0 0 100% 100%));
+    transition: clip-path .35s;
 }
 
-.idiomas li{
-    width: 100%;
-}
 
 .idiomas li a {
     display: flex;
@@ -79,7 +99,8 @@ img {
 }
 
 .idiomas li a:hover {
-    background-color: rgb(33, 43, 71);
+    background-color: rgba(194, 193, 193, 0.1);
+    border-radius: 9px;
 }
 
 .idiomas li img {
@@ -90,6 +111,7 @@ img {
 
 .toggle {
     visibility: visible;
+    transition-delay: 100ms;
 }
 
 /* Main */
@@ -374,3 +396,5 @@ body {
 .autocomplete-suggestion-address {
     font-size: 12px;
 }
+
+

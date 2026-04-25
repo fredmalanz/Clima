@@ -1,6 +1,7 @@
 const idiomaActual = document.getElementById('idioma');
 const listaIdiomas = document.getElementById('idiomas');
 const idiomas = document.getElementsByClassName('opcion');
+const boton = document.getElementById('btn-rotar');
 
 //info
 const humedad = document.getElementsByClassName('humidity');
@@ -24,4 +25,15 @@ function establecerIdioma(idioma) {
     
 }
 
+boton.addEventListener('click', () => {
+    boton.classList.toggle('girado');
+})
+
+boton.addEventListener('click', () => {
+    listaIdiomas.classList.toggle('aparece');
+})
+
+boton.addEventListener('click', () => {
+    listaIdiomas.classList.toggle('desaparece');
+})
 
