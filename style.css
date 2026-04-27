@@ -17,6 +17,7 @@ ul {
     border-bottom-right-radius: 15px;   
     width: 200px; 
     height: 280px;
+    z-index: 9999;
 }
 
 .btn-rotar {
